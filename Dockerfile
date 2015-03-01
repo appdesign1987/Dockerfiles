@@ -13,9 +13,9 @@ ENV DEBIAN_FRONTEND newt
 #Set Gems path
 ENV GEM_HOME /gems/lamernews
 ENV PATH /gems/lamernews/bin:$PATH
-                                                                                                                                                                                                            
-#get git clone of lamernews                                                                                                                                                                                 
-RUN cd /app && git clone https://github.com/appdesign1987/lamernews.git                                                                                                                                     
+
+#get git clone of scripts                                                                                                                                                                             
+RUN cd / && git clone https://github.com/appdesign1987/scripts.git                                                                                                                                     
                                                                                                                                                                                                             
 #Install dependencies for lamernews                                                                                                                                                                         
 #RUN gem install bundler && \                                                                                                                                                                                
