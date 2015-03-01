@@ -9,10 +9,6 @@ RUN apt-get update -q && \
                                                                                                                                                                                                             
 # https://github.com/docker/docker/issues/4032                                                                                                                                                              
 ENV DEBIAN_FRONTEND newt                                                                                                                                                                                    
-                                                                                                                                                                                                            
-# mk dirs                                                                                                                                                                                                   
-RUN mkdir /app                                                                                                                                                                                              
-RUN mkdir /scripts
 
 #Set Gems path
 ENV GEM_HOME /gems/lamernews
