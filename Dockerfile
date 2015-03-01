@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
                                                                                                                                                                                                             
 # Install dependencies needed by Rails, followed by cleanup                                                                                                                                                 
 RUN apt-get update -q && \                                                                                                                                                                                  
-    apt-get install -qy git ruby1.9.1 ruby-dev build-essential --no-install-recommends && \                                                                                                                                         
+    apt-get install -qy git ruby1.9.1 ruby-dev build-essential && \                                                                                                                                         
     apt-get clean                                                                                                                                                                                           
                                                                                                                                                                                                             
 # https://github.com/docker/docker/issues/4032                                                                                                                                                              
