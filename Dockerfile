@@ -15,7 +15,7 @@ ENV GEM_HOME /gems/lamernews
 ENV PATH /gems/lamernews/bin:$PATH
 
 #get git clone of scripts                                                                                                                                                                             
-RUN cd / && git clone https://github.com/appdesign1987/scripts.git                                                                                                                                     
+RUN cd / && git clone https://github.com/appdesign1987/scripts.git                                                                                                                                  
                                                                                                                                                                                                             
 #Install dependencies for lamernews                                                                                                                                                                         
 #RUN gem install bundler && \                                                                                                                                                                                
