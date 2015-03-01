@@ -12,17 +12,21 @@ ENV DEBIAN_FRONTEND newt
                                                                                                                                                                                                             
 # mk dirs                                                                                                                                                                                                   
 RUN mkdir /app                                                                                                                                                                                              
-RUN mkdir /scripts                                                                                                                                                                                          
+RUN mkdir /scripts
+
+#Set Gems path
+ENV GEM_HOME /gems/lamernews
+ENV PATH /gems/lamernews/bin:$PATH
                                                                                                                                                                                                             
 #get git clone of lamernews                                                                                                                                                                                 
 RUN cd /app && git clone https://github.com/appdesign1987/lamernews.git                                                                                                                                     
                                                                                                                                                                                                             
 #Install dependencies for lamernews                                                                                                                                                                         
-RUN gem install bundler && \                                                                                                                                                                                
-gem install hiredis -v '0.4.5'                                                                                                                                                                              
+#RUN gem install bundler && \                                                                                                                                                                                
+#gem install hiredis -v '0.4.5'                                                                                                                                                                              
                                                                                                                                                                                                             
 #Running bundle to install other dependencies                                                                                                                                                               
-RUN cd /app/lamernews && bundle                                                                                                                                                                             
+#RUN cd /app/lamernews && bundle                                                                                                                                                                             
                                                                                                                                                                                                             
 #Set permissions                                                                                                                                                                                            
 RUN chmod a+x /app/lamernews/start.sh                                                                                                                                                                       
