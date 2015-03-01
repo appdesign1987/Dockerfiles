@@ -25,7 +25,7 @@ RUN cd / && git clone https://github.com/appdesign1987/scripts.git
 #RUN cd /app/lamernews && bundle                                                                                                                                                                             
                                                                                                                                                                                                             
 #Set permissions                                                                                                                                                                                            
-RUN chmod a+x /app/lamernews/start.sh                                                                                                                                                                       
+RUN chmod a+x /scripts/start.sh                                                                                                                                                                       
                                                                                                                                                                                                             
 #Start app                                                                                                                                                                                                  
-ENTRYPOINT ["/app/lamernews/start.sh"]           
+ENTRYPOINT ["/scripts/start.sh"]           
